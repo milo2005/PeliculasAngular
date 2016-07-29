@@ -21,6 +21,7 @@ export class LoginComponent{
     }
 
     login(){
+        //navigate(["path", parametros])
         this.router.navigate(["dashboard"]);
     }
 

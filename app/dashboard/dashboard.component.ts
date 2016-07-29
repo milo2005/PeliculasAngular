@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from "@angular/router";
+import {ROUTER_DIRECTIVES,Router} from "@angular/router";
 
 @Component({
     templateUrl:"./app/dashboard/dashboard.component.html",
@@ -7,6 +7,11 @@ import {ROUTER_DIRECTIVES} from "@angular/router";
 })
 export class DashboardComponent{
 
-    selectMenu(index:number){}
-    selectProfile(index:number){}
+    constructor(private router:Router){}
+
+    selectProfile(index:number){
+        if(index == 1){
+            this.router.navigate(["login"]);
+        }
+    }
 }

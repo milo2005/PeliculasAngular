@@ -5,20 +5,20 @@
             <li class="collection-header  grey darken-4">
                 <h5>Genero</h5>
             </li>
-            <a class="collection-item" (click)="selectMenu(0)"><i class="movie-icons">&#xf107;</i><span>Populares</span></a>
-            <a class="collection-item" (click)="selectMenu(1)"><i class="movie-icons">&#xf103;</i><span>Accion</span></a>
-            <a class="collection-item" (click)="selectMenu(2)"><i class="movie-icons">&#xf106;</i><span>Comedia</span></a>
-            <a class="collection-item" (click)="selectMenu(3)"><i class="movie-icons">&#xf105;</i><span>Drama</span></a>
-            <a class="collection-item" (click)="selectMenu(4)"><i class="movie-icons">&#xf104;</i><span>Romance</span></a>
-            <a class="collection-item" (click)="selectMenu(5)"><i class="movie-icons">&#xf100;</i><span>Superherues</span></a>
-            <a class="collection-item" (click)="selectMenu(6)"><i class="movie-icons">&#xf102;</i><span>Fantasia</span></a>
+            <a class="collection-item" routerLink="genre/populares" routerLinkActive="selected"><i class="movie-icons">&#xf107;</i><span>Populares</span></a>
+            <a class="collection-item" routerLink="genre/accion" routerLinkActive="selected"><i class="movie-icons">&#xf103;</i><span>Accion</span></a>
+            <a class="collection-item" routerLink="genre/comedia" routerLinkActive="selected"><i class="movie-icons">&#xf106;</i><span>Comedia</span></a>
+            <a class="collection-item" routerLink="genre/drama" routerLinkActive="selected"><i class="movie-icons">&#xf105;</i><span>Drama</span></a>
+            <a class="collection-item" routerLink="genre/romance" routerLinkActive="selected"><i class="movie-icons">&#xf104;</i><span>Romance</span></a>
+            <a class="collection-item" routerLink="genre/heroes" routerLinkActive="selected"><i class="movie-icons">&#xf100;</i><span>Superheroes</span></a>
+            <a class="collection-item" routerLink="genre/fantasia" routerLinkActive="selected"><i class="movie-icons">&#xf102;</i><span>Fantasia</span></a>
         </ul>
         <ul class="collection nm with-header grey darken-4 grey-text text-lighten-3 nav-less">
             <li class="collection-header grey darken-4 ">
                 <h5>Perfil</h5>
             </li>
             <a class="collection-item" (click)="selectProfile(0)"><i class="material-icons">favorite</i><span>Mis peliculas</span></a>
-            <a class="collection-item" (click)="selectProfile(0)"><i class="material-icons">power_settings_new</i><span>Cerrar Sesion</span></a>
+            <a class="collection-item" (click)="selectProfile(1)"><i class="material-icons">power_settings_new</i><span>Cerrar Sesion</span></a>
         </ul>
     </div>
     <div class="col s12 m8 l10 nm">
@@ -34,8 +34,4 @@
         </div>
 
     </div>
-
-
-
-
 </div>

@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {Router,ROUTER_DIRECTIVES} from '@angular/router';
+import {Component} from "@angular/core";
+import {ROUTER_DIRECTIVES} from '@angular/router';
 import {AppSettings, AppUrls} from './shared/index';
 
 import 'rxjs/add/observable/throw';
