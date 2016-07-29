@@ -1,0 +1,17 @@
+typings
+app/**/*.js
+app/**/*.map
+node_modules
+jspm_packages
+bower_components
+*.log
+
+# compiled output
+/dist
+/tmp
+
+#System Files
+.DS_Store
+
+#IDE
+.vscode
