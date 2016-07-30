@@ -1,6 +1,7 @@
-import {Component} from "@angular/core";
+import {Component,OnInit} from "@angular/core";
 import {MovieComponent} from "./movie.component";
-import {Movie} from "../../shared/index";
+import {Movie, MovieService} from "../../shared/index";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     templateUrl:"./app/movies/movie-list/movie-list.component.html",
@@ -8,5 +9,9 @@ import {Movie} from "../../shared/index";
 })
 export class MovieListComponent{
     
-    data:Movie[];
+    constructor(private service:MovieService, private route:ActivatedRoute){
+        let genre = +route.snapshot.params["genre"];
+        service.loadMovies(genre); 
+    }
+
 }

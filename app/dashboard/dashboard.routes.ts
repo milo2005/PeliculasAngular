@@ -6,7 +6,7 @@ export const routesDashboard: RouterConfig = [
     {
         path: "dashboard", component: DashboardComponent
         , children:[
-            {path:"", redirectTo:"genre/populares", pathMatch:"full"},
+            {path:"", redirectTo:"genre/53", pathMatch:"full"},
             { path:"genre/:genre", component:MovieListComponent}
         ]
     }

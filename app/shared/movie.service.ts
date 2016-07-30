@@ -7,21 +7,32 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class MovieService{
     
-    constructor(private http:Http, private urls:AppUrls){}
+    data:Movie[];
 
-    getMoviesByGenre(genre:number):Observable<Movie[]>{
+    constructor(private http:Http, private urls:AppUrls){
+        this.data = [];
+    }
+
+    loadMovies(genre:number){
+        this.getMoviesByGenre(genre).subscribe(
+            res=> this.data = res,
+            err=> console.log(err)
+        );
+    }
+
+    private getMoviesByGenre(genre:number):Observable<Movie[]>{
         let url:string = this.urls.urlByMovieGenre(genre,"2016");
         return this.http.get(url).map(this.processResponse).catch(this.handleError);
 
     }
 
-    processResponse(res:Response){
+    private processResponse(res:Response){
         let body = res.json();
         body = body.results;
         return body;
     }
 
-    handleError(err:any){
+    private handleError(err:any){
         return Observable.throw(err);
     }
 

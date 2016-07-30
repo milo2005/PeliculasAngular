@@ -5,13 +5,13 @@
             <li class="collection-header  grey darken-4">
                 <h5>Genero</h5>
             </li>
-            <a class="collection-item" routerLink="genre/populares" routerLinkActive="selected"><i class="movie-icons">&#xf107;</i><span>Populares</span></a>
-            <a class="collection-item" routerLink="genre/accion" routerLinkActive="selected"><i class="movie-icons">&#xf103;</i><span>Accion</span></a>
-            <a class="collection-item" routerLink="genre/comedia" routerLinkActive="selected"><i class="movie-icons">&#xf106;</i><span>Comedia</span></a>
-            <a class="collection-item" routerLink="genre/drama" routerLinkActive="selected"><i class="movie-icons">&#xf105;</i><span>Drama</span></a>
-            <a class="collection-item" routerLink="genre/romance" routerLinkActive="selected"><i class="movie-icons">&#xf104;</i><span>Romance</span></a>
-            <a class="collection-item" routerLink="genre/heroes" routerLinkActive="selected"><i class="movie-icons">&#xf100;</i><span>Superheroes</span></a>
-            <a class="collection-item" routerLink="genre/fantasia" routerLinkActive="selected"><i class="movie-icons">&#xf102;</i><span>Fantasia</span></a>
+            <a class="collection-item" routerLink="genre/53" routerLinkActive="selected" (click)="loadGenre(53)"><i class="movie-icons">&#xf107;</i><span>Populares</span></a>
+            <a class="collection-item" routerLink="genre/28" routerLinkActive="selected" (click)="loadGenre(28)"><i class="movie-icons">&#xf103;</i><span>Accion</span></a>
+            <a class="collection-item" routerLink="genre/35" routerLinkActive="selected" (click)="loadGenre(35)"><i class="movie-icons">&#xf106;</i><span>Comedia</span></a>
+            <a class="collection-item" routerLink="genre/18" routerLinkActive="selected" (click)="loadGenre(18)"><i class="movie-icons">&#xf105;</i><span>Drama</span></a>
+            <a class="collection-item" routerLink="genre/10749" routerLinkActive="selected" (click)="loadGenre(10749)"><i class="movie-icons">&#xf104;</i><span>Romance</span></a>
+            <a class="collection-item" routerLink="genre/27" routerLinkActive="selected" (click)="loadGenre(27)"><i class="movie-icons">&#xf100;</i><span>Superheroes</span></a>
+            <a class="collection-item" routerLink="genre/14" routerLinkActive="selected" (click)="loadGenre(14)"><i class="movie-icons">&#xf102;</i><span>Fantasia</span></a>
         </ul>
         <ul class="collection nm with-header grey darken-4 grey-text text-lighten-3 nav-less">
             <li class="collection-header grey darken-4 ">
@@ -30,7 +30,9 @@
         </nav>
 
         <div class="dash-content">
+            
             <router-outlet></router-outlet>
+            
         </div>
 
     </div>
