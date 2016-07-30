@@ -32,19 +32,19 @@
                     <span class="card-title">Registrate</span>
                     <form>
                         <div class="input-field">
-                            <input id="name" type="text" class="validate">
+                            <input id="name" type="text" class="validate" [(ngModel)]="user.nombre">
                             <label for="name">Nombre</label>
                         </div>
                         <div class="input-field">
-                            <input id="ced" type="number" class="validate">
+                            <input id="ced" type="number" class="validate" [(ngModel)]="user.cedula">
                             <label for="ced">Cedula</label>
                         </div>
                         <div class="input-field">
-                            <input id="usr" type="text" class="validate">
+                            <input id="usr" type="text" class="validate" [(ngModel)]="user.usuario">
                             <label for="usr">Usuario</label>
                         </div>
                         <div class="input-field">
-                            <input id="pass" type="text" class="validate">
+                            <input id="pass" type="text" class="validate" [(ngModel)]="user.password">
                             <label for="pass">Contraseña</label>
                         </div>
                         <div class="row">
@@ -57,6 +57,8 @@
                             <a  class="horizontal-text-center waves-effect waves-light btn-flat orange-text col s6" (click)="switchToLogin()" >Cancelar</a>
                             <button class="btn waves-effect waves-light orange col s6" type="submit" >Listo</button>
                         </div>
+
+                        {{user|json}}
                     </form>
                 </div>
 
